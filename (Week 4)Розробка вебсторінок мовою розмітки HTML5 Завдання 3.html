@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            margin:  auto;
+            width: 40%;
+            height: 150px;
+            background-color: rgb(0, 0, 0);
+            overflow: hidden;
+        }
+
+        .left-block{
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: bisque;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .right-block{
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: bisque;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img{
+            width: 100%;
+            height: 100%;
+        }
+        .text{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .container:hover .img {
+            transition: 1s ease-out;
+            transform: scale(1.4); /* Adjust the scaling factor as needed */
+        }
+        .container:hover .overlay {
+            opacity: 0.3;
+            transition: all 0.3s ease-in-out 0s;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="margin-top: 50px;">
+        <div class="overlay"></div>
+        <div class="left-block"><img src="./imgs/завантаження.jpg" alt="" class="img"></div>
+        <div class="right-block text"><p><b>HELLO, WORLD!</b></p></div>
+    </div>
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="right-block"><img src="./imgs/завантаження.jpg" alt="" class="img"></div>
+        <div class="left-block text"><p><b>HELLO, WORLD!</b></p></div>
+    </div>
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="left-block"><img src="./imgs/завантаження.jpg" alt="" class="img"></div>
+        <div class="right-block text"><p><b>HELLO, WORLD!</b></p></div>
+    </div>    
+</body>
+</html>

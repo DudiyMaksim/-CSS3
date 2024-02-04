@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документ</title>
+    <style>
+        @keyframes myAnim {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .inner-container {
+            width: 250px;
+            height: 250px;
+            border: 10px solid aqua;
+            position: relative;
+            border-radius: 50%;
+        }
+        .center {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 48.5%;
+            left: 48.5%;
+            border-radius: 50%;
+            background-color: rgb(0, 0, 0); /* Додано для видимості */
+        }
+        .sec {
+            background-color: black;
+            position: absolute;
+            width: 2px;
+            height: 40%;
+            top: 8.5%;
+            left: 49%;
+            border: 2px solid;
+            transform-origin: 50% 100%;
+            animation: myAnim 35s cubic-bezier(0,0,1,1) 0s infinite;
+        }
+        .min {
+            background-color: black;
+            position:absolute;
+            width: 2px;
+            height: 30%;
+            border: 2px solid;
+            top: 18.5%;
+            left: 49%;
+            transform-origin: 50% 100%;
+            animation: myAnim 75s cubic-bezier(0,0,1,1) 0s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <div class="center">
+            </div>
+            <div class="min">
+            </div>
+            <div class="sec">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
